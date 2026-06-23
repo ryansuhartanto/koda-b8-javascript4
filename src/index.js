@@ -1,5 +1,10 @@
 const PI = 22 / 7;
 
+/**
+ * @param {function(number): number} cb
+ * @param {number} r
+ * @returns {number}
+ */
 function calculate(cb, r) {
 	if (typeof cb !== "function") {
 		throw new Error("cb harus berupa function");
@@ -12,10 +17,18 @@ function calculate(cb, r) {
 	return cb(r);
 }
 
+/**
+ * @param {number} r
+ * @returns {number}
+ */
 function keliling(r) {
 	return PI * r * r;
 }
 
+/**
+ * @param {number} r
+ * @returns {number}
+ */
 function luas(r) {
 	return PI * r * 2;
 }
