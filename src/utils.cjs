@@ -1,5 +1,3 @@
-const PI = 22 / 7;
-
 /**
  * @param {function(number): number} cb
  * @param {number} r
@@ -23,21 +21,4 @@ function calculate(cb, r) {
 	return result;
 }
 
-/**
- * @param {number} r
- * @returns {number}
- */
-function keliling(r) {
-	return PI * r * r;
-}
-
-/**
- * @param {number} r
- * @returns {number}
- */
-function luas(r) {
-	return PI * r * 2;
-}
-
-console.log(calculate(keliling, 7));
-console.log(calculate(luas, 7));
+module.export = calculate;
