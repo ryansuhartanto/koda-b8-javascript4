@@ -14,7 +14,13 @@ function calculate(cb, r) {
 		throw new Error("r harus berupa number");
 	}
 
-	return cb(r);
+	const result = cb(r);
+
+	if (typeof result !== "number") {
+		throw new Error("cb harus me-return-kan number");
+	}
+
+	return result;
 }
 
 /**
